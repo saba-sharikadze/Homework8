@@ -1,0 +1,65 @@
+
+.animation-block {
+    position: relative;
+    overflow: hidden;
+    width: 1380px;
+}
+.trainimage {
+    width: 450px;
+    height: 250px;
+    animation: trainmove 10s infinite ease-in-out;
+    position: absolute;
+    transform: scaleX(-1);
+    bottom: 40px;
+
+}
+@keyframes trainmove {
+0% {left: -450px}
+45% {left: 450px;}
+50% {left: 450px}
+100% {left: 1500px}
+}
+
+.rollingbush {
+    width: 100px;
+    height: auto;
+    animation: bushroll 10s infinite linear;
+    position: absolute;
+    bottom: 30px;
+}
+
+@keyframes bushroll {
+    0% {left: -100px; bottom: 0px;}
+    20% {bottom: 30px;transform: rotate(180deg);}
+    40% {bottom: 0px;transform: rotate(360deg);}
+    60% {bottom: 30px;transform: rotate(540deg);}
+    80% {bottom: 0px;transform: rotate(720deg);}
+    100% {left: 1400px; bottom: 30px;transform: rotate(900deg);}
+}
+.comet {
+    width: 150px;
+    height: auto;
+    animation: cometdown 15s infinite linear;
+    position: absolute;
+    z-index: 11;
+    transform: scaleX(-1);
+}
+@keyframes cometdown {
+    0% {left: -1500px; top: -1500px;}
+    100% {left: 1200px; top: 300px;}
+}
+.explosion  {
+    width: 1000px;
+    opacity: 0;
+    height: auto;
+    left: 750px;
+    top: -50px;
+    animation: boom 2s linear;
+    animation-delay: 14.9s;
+    position: absolute;
+    z-index: 12;
+}
+@keyframes boom {
+    0% {opacity: 1; transform: scale(0);}
+    100% {opacity: 1; transform: scale(1)} 
+}
